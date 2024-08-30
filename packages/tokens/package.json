@@ -1,0 +1,18 @@
+{
+  "name": "tokens",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup ./src/index.ts --format esm,cjs --dts",
+    "dev": "tsup ./src/index.ts --format esm,cjs --dts --watch"
+  },
+  "author": "Manuel Bento",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}
