@@ -5,17 +5,21 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup ./src/index.ts --format esm,cjs --dts",
-    "dev": "tsup ./src/index.ts --format esm,cjs --dts --watch",
+    "build": "tsup ./src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup ./src/index.tsx --format esm,cjs --dts --external react --watch",
     "lint": "eslint ./src/**.ts* --fix"
   },
   "author": "Manuel Bento",
   "license": "MIT",
   "description": "",
   "devDependencies": {
-    "@dev-ui/typescript": "*",
-    "@dev-ui/tokens": "*",
     "@dev-ui/eslint": "*",
+    "@dev-ui/tokens": "*",
+    "@dev-ui/typescript": "*",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   }
