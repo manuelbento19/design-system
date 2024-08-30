@@ -6,7 +6,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup ./src/index.ts --format esm,cjs --dts",
-    "dev": "tsup ./src/index.ts --format esm,cjs --dts --watch"
+    "dev": "tsup ./src/index.ts --format esm,cjs --dts --watch",
+    "lint": "eslint ./src/**.ts* --fix"
   },
   "author": "Manuel Bento",
   "license": "MIT",
@@ -14,6 +15,7 @@
   "devDependencies": {
     "@dev-ui/typescript": "*",
     "@dev-ui/tokens": "*",
+    "@dev-ui/eslint": "*",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   }
