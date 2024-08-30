@@ -1,3 +1,4 @@
 {
+  "extends": "@dev-ui/typescript/react.json",
   "include": ["./src"]
 }

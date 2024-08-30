@@ -1,3 +1,4 @@
 {
+  "extends": "@dev-ui/typescript/base.json",
   "include": ["./src"]
 }
