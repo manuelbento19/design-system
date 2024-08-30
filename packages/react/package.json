@@ -1,5 +1,5 @@
 {
-  "name": "react",
+  "name": "@dev-ui/react",
   "version": "1.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -12,6 +12,7 @@
   "license": "MIT",
   "description": "",
   "devDependencies": {
+    "@dev-ui/tokens": "*",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   }

@@ -1,0 +1,9 @@
+{
+  "name": "design-system",
+  "author": "Manuel Bento",
+  "license": "MIT",
+  "private": false,
+  "workspaces":[
+    "packages/*"
+  ]
+}
