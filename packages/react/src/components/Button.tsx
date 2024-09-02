@@ -1,28 +1,21 @@
-import { ComponentProps, ElementType } from 'react'
+import { ComponentProps } from 'react'
 import { styled } from '../styles'
 
 export const Button = styled('button', {
+  boxSizing: 'border-box',
   all: 'unset',
-  borderRadius: '$sm',
+  fontFamily: '$default',
   fontSize: '$sm',
   fontWeight: '$medium',
-  fontFamily: '$default',
   textAlign: 'center',
-  minWidth: 120,
-  boxSizing: 'border-box',
-  padding: '0 $4',
-
+  minWidth: 135,
+  height: 38,
+  padding: '.1rem',
+  borderRadius: '$xs',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: '$2',
-
   cursor: 'pointer',
-
-  svg: {
-    width: '$4',
-    height: '$4',
-  },
 
   '&:disabled': {
     cursor: 'not-allowed',
@@ -36,51 +29,25 @@ export const Button = styled('button', {
     variant: {
       primary: {
         color: '$white',
-        background: '$ignite500',
-
-        '&:not(:disabled):hover': {
-          background: '$ignite300',
-        },
-
-        '&:disabled': {
-          backgroundColor: '$gray200',
-        },
+        background: '$black',
       },
 
       secondary: {
-        color: '$ignite300',
-        border: '2px solid $ignite500',
-
-        '&:not(:disabled):hover': {
-          background: '$ignite500',
-          color: '$white',
-        },
-
-        '&:disabled': {
-          color: '$gray200',
-          borderColor: '$gray200',
-        },
-      },
-    },
-    size: {
-      sm: {
-        height: 38,
-      },
-
-      md: {
-        height: 46,
+        color: '$gray-500',
+        border: '2px solid $gray-900',
       },
     },
   },
 
   defaultVariants: {
     variant: 'primary',
-    size: 'md',
   },
 })
 
-export interface ButtonProps extends ComponentProps<typeof Button> {
-  as?: ElementType
+export type ButtonVariant = "primary" | "secondary"
+
+export type ButtonProps = ComponentProps<"button"> &  {
+  variant: ButtonVariant
 }
 
 Button.displayName = 'Button'
